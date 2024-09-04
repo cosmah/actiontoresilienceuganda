@@ -17,7 +17,6 @@ const RoutingComponent = () => {
         <Link to="/">
           <img src={logo} alt="Logo" /> {/* Replace placeholder with logo */}
         </Link>
-        
       </div>
       <ul className={`nav-links ${isOpen ? "show-menu" : ""}`}>
         <div className="close" onClick={toggleMenu}>
@@ -28,20 +27,33 @@ const RoutingComponent = () => {
             <span>Home</span>
           </Link>
         </li>
-        <li>
-          <Link to="/services">
-            <span>Service Center</span>
-          </Link>
-        </li>
-        
+        <li>|</li>
         <li>
           <Link to="/about">
             <span>About Us</span>
           </Link>
         </li>
+        <li>|</li>
+        <li>
+          <Link to="/services">
+            <span>What We Do</span>
+          </Link>
+        </li>
+        <li>|</li>
+        <li>
+          <Link to="/support">
+            <span>Support Us</span>
+          </Link>
+        </li>
+        <li>|</li>
         <li>
           <Link to="/contact">
             <span>Contact Us</span>
+          </Link>
+        </li>
+        <li className="donate-button">
+          <Link to={"/donate"}>
+            <button className="btn">Donate</button>
           </Link>
         </li>
       </ul>
