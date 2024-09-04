@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 235, 212);
+  background-color: rgb(20, 83, 230);
   color: #110e0e;
   padding: 2.0rem; /* Reduced padding for height */
   z-index: 1000;
@@ -18,9 +18,9 @@
 }
 
 .nav-bar .logo img {
-  width: 100%;
+  width: 3.7rem;
   height: auto;
-  background-color: rgb(253, 254, 255);
+  /* background-color: rgb(253, 254, 255); */
   /* border-radius: 20%; */
 }
 
@@ -47,7 +47,7 @@
 }
 
 .nav-links li a {
-  color: #1d05f5; /* Link color */
+  color: #fdfcff; /* Link color */
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 1.2rem; /* Adjust font size as needed */
@@ -74,7 +74,7 @@
 .btn {
   color: rgb(255, 176, 19); /* Button text color */
   font-size: large;
-  background-color: blue; /* Button background color */
+  background-color: rgb(185, 185, 242); /* Button background color */
   border: whitesmoke; /* Remove border */
   border-radius: 25px; /* Rounded corners */
   padding: 0.5rem 2.3rem; /* Padding for the button */

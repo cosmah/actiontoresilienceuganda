@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Routes.css";
-import logo from "../../assets/logo2.png";
+import logo from "../../assets/logo (2).png";
 
 const RoutingComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
