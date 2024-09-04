@@ -84,50 +84,54 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-bar ul {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 70%;
-      height: 100vh;
-      background-color: #fcfcfc;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease-in-out;
-      padding: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: #fcfcfc;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 4rem;
+  }
+
+  .nav-bar ul.show-menu {
+    transform: translateX(0); /* Move menu into view */
   }
 
   .nav-links {
-      flex-direction: column; /* Stack links vertically in mobile view */
-      margin-left: 0; /* Reset margin for mobile */
+    flex-direction: column; /* Stack links vertically in mobile view */
+    margin-left: 0; /* Reset margin for mobile */
   }
 
   .nav-links li {
-      width: 100%; /* Full width for mobile links */
-      border-bottom: 1px solid #fff;
+    width: 100%; /* Full width for mobile links */
+    border-bottom: 1px solid #fff;
   }
 
   .nav-bar .hamburger {
-      display: block;
-      cursor: pointer;
+    display: block;
+    cursor: pointer;
   }
 
   .nav-bar .hamburger .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background-color: #fffafa;
-      margin: 5px auto;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fffafa;
+    margin: 5px auto;
   }
 
   .nav-bar .close {
-      display: block;
-      color: whitesmoke;
+    display: block;
+    color: whitesmoke;
   }
 
   .nav-bar ul.show-menu .close {
-      display: block;
+    display: block;
   }
 }
 
@@ -154,14 +158,11 @@
   right: 0;
 }
 
-
 .logo-container {
   display: flex;
   align-items: center; /* Align items vertically centered */
   width: 100%; /* Ensure the container takes the full width */
 }
-
-
 
 .logo img {
   margin-left: 3rem; /* Add some space between the image and the text */
@@ -177,7 +178,8 @@
 .logo-text h4 {
   color: rgb(126, 84, 0);
   font-weight: bolder;
-} 
-.logo-text p{
+}
+
+.logo-text p {
   font-style: italic;
 }
