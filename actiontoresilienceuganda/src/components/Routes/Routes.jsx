@@ -15,12 +15,12 @@ const RoutingComponent = () => {
     <nav className="nav-bar">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="action to resilience uganda" />
-          <div className="logotxt">
-            <h4>Action to resilience uganda</h4>
-            <p>Identify. Transform. Sustain</p>
-          </div>
+          <img src={logo} alt="Action to Resilience Uganda" />
         </Link>
+      </div>
+      <div className="logo-text">
+        <h4>Action to Resilience Uganda</h4>
+        <p>Identify. Transform. Sustain</p>
       </div>
       <ul className={`nav-links ${isOpen ? "show-menu" : ""}`}>
         <div className="close" onClick={toggleMenu}>
