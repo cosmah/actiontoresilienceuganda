@@ -1,4 +1,3 @@
-// routes.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Routes.css";
@@ -13,14 +12,16 @@ const RoutingComponent = () => {
 
   return (
     <nav className="nav-bar">
-      <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="Action to Resilience Uganda" />
-        </Link>
-      </div>
-      <div className="logo-text">
-        <h4>Action to Resilience Uganda</h4>
-        <p>Identify. Transform. Sustain</p>
+      <div className="logo-container">
+        <div className="logo">
+          <Link to="/">
+            <img src={logo} alt="Action to Resilience Uganda" />
+          </Link>
+        </div>
+        <div className="logo-text">
+          <h4>Action to Resilience Uganda</h4>
+          <p>Identify. Transform. Sustain</p>
+        </div>
       </div>
       <ul className={`nav-links ${isOpen ? "show-menu" : ""}`}>
         <div className="close" onClick={toggleMenu}>
@@ -61,9 +62,6 @@ const RoutingComponent = () => {
           </Link>
         </li>
       </ul>
-      {/* <div className="company-name">
-        <strong>Carfic AutoRepairs</strong>
-      </div> */}
       <div className="hamburger" onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>

@@ -1,27 +1,46 @@
-/* routes.css */
-
 .nav-bar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   background-color: rgb(97, 143, 249);
   color: #110e0e;
-  padding: 2.0rem; /* Reduced padding for height */
+  padding: 2.0rem;
   z-index: 1000;
   position: sticky;
-  top: 0; /* Stick to the top */
+  top: 0;
 }
 
-.nav-bar .logo {
-  width: 200px; /* Adjust as needed */
-  height: 50px; /* Reduced logo container height */
+.logo-container {
+  display: flex;
+  align-items: left;
 }
 
-.nav-bar .logo img {
-  width: 3.7rem;
+.logo {
+  width: 200px;
+  height: 50px;
+}
+
+.logo img {
+  width: 3.5rem;
   height: auto;
-  /* background-color: rgb(253, 254, 255); */
-  /* border-radius: 20%; */
+  margin-left: 0.1rem;
+}
+
+.logo-text {
+  text-align: left;
+  margin-left: 0.5rem; /* Adjust as needed */
+  font-size: larger;
+}
+
+.logo-text h4 {
+  color: rgb(253, 12, 12);
+  font-weight: bolder;
+  font-size: 1.0rem;
+}
+
+.logo-text p {
+  font-style: italic;
+  font-size: 0.8rem;
 }
 
 * {
@@ -33,28 +52,28 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 0; /* Remove gap for manual spacing */
-  margin-left: auto; /* Push links to the right */
+  gap: 0;
+  margin-left: auto;
 }
 
 .nav-links li {
-  display: flex; /* Align elements inline */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li:not(:last-child) {
-  margin-right: 1rem; /* Space between links */
+  margin-right: 1rem;
 }
 
 .nav-links li a {
-  color: #fdfcff; /* Link color */
+  color: #fdfcff;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-size: 1.2rem; /* Adjust font size as needed */
+  font-size: 1.2rem;
 }
 
 .nav-links li a:hover {
-  color: #bada55; /* Hover color */
+  color: #bada55;
 }
 
 .nav-bar .close {
@@ -68,20 +87,19 @@
 }
 
 .donate-button {
-  margin-left: 1.4rem; /* Slight margin to separate from links */
+  margin-left: 1.4rem;
 }
 
 .btn {
-  color: rgb(255, 176, 19); /* Button text color */
+  color: rgb(255, 176, 19);
   font-size: large;
-  background-color: rgb(185, 185, 242); /* Button background color */
-  border: whitesmoke; /* Remove border */
-  border-radius: 25px; /* Rounded corners */
-  padding: 0.5rem 2.3rem; /* Padding for the button */
-  cursor: pointer; /* Pointer cursor on hover */
+  background-color: rgb(185, 185, 242);
+  border: whitesmoke;
+  border-radius: 25px;
+  padding: 0.5rem 2.3rem;
+  cursor: pointer;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .nav-bar ul {
     position: fixed;
@@ -99,16 +117,16 @@
   }
 
   .nav-bar ul.show-menu {
-    transform: translateX(0); /* Move menu into view */
+    transform: translateX(0);
   }
 
   .nav-links {
-    flex-direction: column; /* Stack links vertically in mobile view */
-    margin-left: 0; /* Reset margin for mobile */
+    flex-direction: column;
+    margin-left: 0;
   }
 
   .nav-links li {
-    width: 100%; /* Full width for mobile links */
+    width: 100%;
     border-bottom: 1px solid #fff;
   }
 
@@ -146,9 +164,9 @@
   z-index: -1;
   left: 0;
   right: 100%;
-  top: 0; /* Changed from bottom to top */
+  top: 0;
   background: #bada55;
-  height: 2px; /* Reduced from 70% to 2px */
+  height: 2px;
   transition-property: right;
   transition-duration: 0.25s;
   transition-timing-function: ease-out;
@@ -156,30 +174,4 @@
 
 .nav-bar li a:hover span::before {
   right: 0;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center; /* Align items vertically centered */
-  width: 100%; /* Ensure the container takes the full width */
-}
-
-.logo img {
-  margin-left: 3rem; /* Add some space between the image and the text */
-  padding-bottom: 2.5rem; /* Add some space between the image and the text */
-}
-
-.logo-text {
-  text-align: left; /* Align text to the right */
-  margin-right: auto;
-  font-size: larger;
-}
-
-.logo-text h4 {
-  color: rgb(126, 84, 0);
-  font-weight: bolder;
-}
-
-.logo-text p {
-  font-style: italic;
 }
