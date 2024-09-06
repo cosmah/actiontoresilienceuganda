@@ -1,9 +1,14 @@
 import React from 'react';
 import './Home.css';
+import Hello from '../Hello/Hello';
 
 const Home = (props) => {
     return <>
         <div>
+        <header>
+        <Hello/>
+          
+        </header>
             
         <main>
         <div class="gear"></div>

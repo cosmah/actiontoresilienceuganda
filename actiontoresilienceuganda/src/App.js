@@ -6,6 +6,7 @@
   import { useMediaQuery } from 'react-responsive';
   import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
   import Home from "./components/Home/Home";
+  import  Hello  from "./components/Hello/Hello";
   // import About from "./components/about";
   // import Contact from "./components/contact";
 
@@ -18,8 +19,8 @@
         <RoutingComponent />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} /> */}
+           <Route path="/hello" element={<Hello />} />
+          {/*<Route path="/contact" element={<Contact />} /> */}
 
   
         </Routes>
