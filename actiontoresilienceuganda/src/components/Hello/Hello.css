@@ -4,6 +4,7 @@
   background-position: center;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
@@ -17,13 +18,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+  z-index: 1; /* Ensure the gradient is above the background image */
 }
 
 .slogan-container {
   position: relative;
+  z-index: 2; /* Ensure the slogans are above the gradient */
 }
 
 .slogan {
@@ -35,6 +38,16 @@
   animation: fadeInOut 10s infinite;
 }
 
+.motto {
+  position: absolute;
+  bottom: 160px; /* Adjust the vertical position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Ensure the motto is above the gradient */
+  font-size: 1.5rem; /* Adjust the size as needed */
+  color: white;
+}
+
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; }
   10%, 90% { opacity: 1; }
@@ -44,11 +57,3 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
-@keyframes slideIn {
-  0% { opacity: 0; z-index: 1; }
-  10% { opacity: 1; z-index: 2; }
-  90% { opacity: 1; z-index: 2; }
-  100% { opacity: 0; z-index: 1; }
-}
-
