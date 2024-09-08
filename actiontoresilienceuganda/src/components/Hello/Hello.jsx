@@ -24,7 +24,7 @@ const Hello = (props) => {
         <h1 className='slogan'>{slogans[currentSloganIndex]}</h1>
       </div>
       <div className="motto">
-        <p>Identify. Transform. Sustain</p>
+        <p><span className="blue">Identify</span>.<span className="orange">Transform</span>.<span className="red">Sustain</span> </p>
       </div>
     </div>
   );
