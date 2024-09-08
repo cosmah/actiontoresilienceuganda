@@ -7,6 +7,7 @@
   import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
   import Home from "./components/Home/Home";
   import  Hello  from "./components/Hello/Hello";
+  import Habout from "./components/Habout/Habout";
   // import About from "./components/about";
   // import Contact from "./components/contact";
 
@@ -20,7 +21,7 @@
         <Routes>
           <Route path="/" element={<Home />} />
            <Route path="/hello" element={<Hello />} />
-          {/*<Route path="/contact" element={<Contact />} /> */}
+           <Route path="/habout" element={<Habout/>} />
 
   
         </Routes>

@@ -1,15 +1,15 @@
 import React from 'react';
 import './Home.css';
 import Hello from '../Hello/Hello';
+import Habout from '../Habout/Habout';
 
 const Home = (props) => {
     return <>
         <div>
         <header>
         <Hello/>
-          
         </header>
-            
+        <Habout/>
         <main>
         <div class="gear"></div>
         <p class="gear-text">WELCOME TO ACTION TO RESILIENCE UGANDA</p>
