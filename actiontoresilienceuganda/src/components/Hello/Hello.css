@@ -2,7 +2,7 @@
   background-image: url('../../assets/2.jpeg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,14 +58,59 @@
   to { opacity: 1; }
 }
 
-.blue{
+.blue {
   color: blue;
 }
 
-.orange{
+.orange {
   color: orange;
 }
 
-.red{
+.red {
   color: red;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .slogan {
+    font-size: 2.8rem;
+  }
+
+  .motto {
+    font-size: 1.3rem;
+    bottom: 140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slogan {
+    font-size: 2.4rem;
+  }
+
+  .motto {
+    font-size: 1.2rem;
+    bottom: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 2rem;
+  }
+
+  .motto {
+    font-size: 1rem;
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slogan {
+    font-size: 1.6rem;
+  }
+
+  .motto {
+    font-size: 0.9rem;
+    bottom: 80px;
+  }
 }
