@@ -4,6 +4,7 @@
     background-color: #fa9c9c;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    
   }
   
   .Habout .title {
@@ -42,7 +43,6 @@
     font-size: 14px;
     color: #0f0d0d;
     margin-bottom: 20px;
-    font-weight: bold;
   }
   
   .Habout .content ul {
@@ -67,6 +67,29 @@
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+  }
+  
+  /* Button Styles */
+  .Habout .content button {
+    background-color: #e9a002;
+    color: white;
+    border: 2px solid rgb(250, 8, 8); /* Set the border to orange */
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .Habout .content button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .Habout .content button:active {
+    background-color: #004494;
+    transform: scale(1);
   }
   
   /* Responsive Styles */
