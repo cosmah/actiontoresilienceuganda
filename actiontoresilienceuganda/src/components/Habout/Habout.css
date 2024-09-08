@@ -1,0 +1,115 @@
+/* Habout.css */
+
+.Habout {
+    background-color: #fa9c9c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .Habout .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .Habout .title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .Habout .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .Habout .content h2, .Habout .content h3 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .Habout .content h2 {
+    font-size: 18px;
+  }
+  
+  .Habout .content h3 {
+    font-size: 16px;
+  }
+  
+  .Habout .content p {
+    font-size: 14px;
+    color: #0f0d0d;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .Habout .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Habout .content li {
+    margin-bottom: 10px;
+  }
+  
+  .Habout .content li strong {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .Habout .content li::before {
+    content: "\2022";
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .Habout .title h1 {
+      font-size: 20px;
+    }
+  
+    .Habout .content {
+      padding: 10px;
+    }
+  
+    .Habout .content h2 {
+      font-size: 16px;
+    }
+  
+    .Habout .content h3 {
+      font-size: 14px;
+    }
+  
+    .Habout .content p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Habout .title h1 {
+      font-size: 18px;
+    }
+  
+    .Habout .content {
+      padding: 5px;
+    }
+  
+    .Habout .content h2 {
+      font-size: 14px;
+    }
+  
+    .Habout .content h3 {
+      font-size: 12px;
+    }
+  
+    .Habout .content p {
+      font-size: 10px;
+    }
+  }
