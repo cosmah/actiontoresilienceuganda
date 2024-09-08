@@ -3,7 +3,7 @@ import "./Hello.css";
 
 const Hello = (props) => {
   const slogans = [
-    "Hello, Welcome to Action To Resilience Uganda",
+    "Welcome to Action To Resilience Uganda",
     "Empowering Communities, Enriching Lives!",
     "Together, We Make a Difference!"
   ];

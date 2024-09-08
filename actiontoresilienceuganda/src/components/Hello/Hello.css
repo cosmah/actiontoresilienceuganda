@@ -28,6 +28,10 @@
 
 .slogan {
   opacity: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: rgb(5, 211, 238);
   animation: fadeInOut 10s infinite;
 }
 
