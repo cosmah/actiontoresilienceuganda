@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import Hello from '../Hello/Hello';
 import Habout from '../Habout/Habout';
+import Stats from '../Stats/Stats';
 
 const Home = (props) => {
     return <>
@@ -10,6 +11,7 @@ const Home = (props) => {
         <Hello/>
         </header>
         <Habout/>
+        <Stats/>
         <main>
         <div class="gear"></div>
         <p class="gear-text">WELCOME TO ACTION TO RESILIENCE UGANDA</p>
