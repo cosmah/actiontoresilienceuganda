@@ -2,7 +2,6 @@ import React from "react";
 import "./Joinus.css";
 import communityGatheringImage from "../../assets/11.jpeg";
 import EductionalWorkshop from "../../assets/8.jpeg";
-import EnvironmentalProject from "../../assets/9.jpeg";
 import YouthEmpowerment from "../../assets/10.jpeg";
 
 const ActivityCard = ({ src, alt, title }) => (
