@@ -16,7 +16,7 @@ const StatCard = ({ title, value, prefix = '', suffix = '' }) => (
 const Stats = ({ volunteers = 15, years = 2, projects = 4 }) => {
   return (
     <div className="stats-container">
-      <h2 className="stats-header">Statistics</h2>
+      
       <div className="stats-grid">
         <StatCard
           title="Volunteers"
