@@ -1,25 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import CountUp from 'react-countup';
 import './Stats.css';
 
-const Stats = ({ users, posts, comments }) => {
-  const [startCount, setStartCount] = useState(false);
+const StatCard = ({ title, value, prefix = '', suffix = '' }) => (
+  <div className="stat-card">
+    <h3 className="stat-title">{title}</h3>
+    <div className="stat-value">
+      {prefix}
+      <CountUp end={value} duration={2.5} separator="," />
+      {suffix}
+    </div>
+  </div>
+);
 
-  useEffect(() => {
-    setTimeout(() => setStartCount(true), 100); // Simulate delay
-  }, []);
-
+const Stats = ({ volunteers = 15, years = 2, projects = 4 }) => {
   return (
-    <>
-      <div className='statistics'>
-        <h2>Statistics</h2>
-        <ul>
-          {users && <li>Number of users: {startCount ? <CountUp start={20} end={users} duration={2} /> : ''}</li>}
-          {posts && <li>Number of posts: {startCount ? <CountUp start={30} end={posts} duration={2} /> : ''}</li>}
-          {comments && <li>Number of comments: {startCount ? <CountUp start={9} end={comments} duration={2} /> : ''}</li>}
-        </ul>
+    <div className="stats-container">
+      <h2 className="stats-header">Statistics</h2>
+      <div className="stats-grid">
+        <StatCard
+          title="Volunteers"
+          value={volunteers}
+          suffix=" +"
+        />
+        <StatCard
+          title="Years of Experience"
+          value={years}
+        />
+        <StatCard
+          title="Projects"
+          value={projects}
+        />
       </div>
-    </>
+    </div>
   );
 };
 
