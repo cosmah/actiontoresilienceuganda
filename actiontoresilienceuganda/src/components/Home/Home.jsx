@@ -3,6 +3,7 @@ import './Home.css';
 import Hello from '../Hello/Hello';
 import Habout from '../Habout/Habout';
 import Stats from '../Stats/Stats';
+import Joinus from '../Joinus/Joinus';
 
 const Home = (props) => {
     return <>
@@ -12,6 +13,7 @@ const Home = (props) => {
         </header>
         <Habout/>
         <Stats/>
+        <Joinus/>
         <main>
         <div class="gear"></div>
         <p class="gear-text">WELCOME TO ACTION TO RESILIENCE UGANDA</p>
