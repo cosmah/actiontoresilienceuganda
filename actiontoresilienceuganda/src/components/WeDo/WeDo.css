@@ -36,7 +36,8 @@
   }
   
   .program-card {
-    border: 1px solid #ddd;
+    border: 1px solid #049fce;
+    background-color: #f7ea3f;
     border-radius: 8px;
     padding: 1rem;
     transition: box-shadow 0.3s ease;
