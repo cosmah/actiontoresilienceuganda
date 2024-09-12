@@ -1,7 +1,22 @@
 import React from 'react';
 import './About.css';
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
+
+  const handleMoreInfoClick = () => {
+    navigate("/whatwedo");
+  };
+
+  const handledonateClick = () => {
+    navigate("/donate");
+  }
+
+  const handlecontactClick = () => {
+    navigate("/contact");
+  }
+
   return (
     <div className="container">
       <h1 className="main-title">About Action to Resilience Uganda</h1>
@@ -32,9 +47,9 @@ const AboutUs = () => {
         <h2 className="section-title">Get Involved</h2>
         <p>Join us in our mission to build a more resilient Uganda. Whether through volunteering, donations, or partnerships, your support can make a significant difference in the lives of many.</p>
         <div className="button-container">
-          <button className="cta-button">Contact Us</button>
-          <button className="cta-button">What We Do</button>
-          <button className="cta-button">Donate</button>
+          <button onClick={handlecontactClick} className="cta-button">Contact Us</button>
+          <button onClick={handleMoreInfoClick} className="cta-button">What We Do</button>
+          <button onClick={handledonateClick} className="cta-button">Donate</button>
         </div>
       </div>
     </div>

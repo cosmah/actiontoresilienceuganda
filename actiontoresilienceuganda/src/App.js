@@ -9,6 +9,7 @@ import Hello from "./components/Hello/Hello";
 import Habout from "./components/Habout/Habout";
 import Stats from "./components/Stats/Stats";
 import AboutUs from "./components/AboutUs/AboutUs";
+import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
 // import About from "./components/about";
 // import Contact from "./components/contact";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/habout" element={<Habout />} />
         <Route path="/stats" element={<Stats />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/whatwedo" element={<WhatWeDo />} />
       </Routes>
 
       {isMobile}

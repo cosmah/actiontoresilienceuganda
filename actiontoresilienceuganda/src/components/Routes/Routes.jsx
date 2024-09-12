@@ -40,7 +40,7 @@ const RoutingComponent = () => {
         </li>
         <li>|</li>
         <li>
-          <Link to="/services">
+          <Link to="/whatwedo">
             <span>What We Do</span>
           </Link>
         </li>
