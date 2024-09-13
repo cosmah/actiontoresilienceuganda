@@ -10,6 +10,8 @@ import Habout from "./components/Habout/Habout";
 import Stats from "./components/Stats/Stats";
 import AboutUs from "./components/AboutUs/AboutUs";
 import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
+import Support from "./components/Support/Support";
+import Donations from "./components/Donations/Donations";
 // import About from "./components/about";
 // import Contact from "./components/contact";
 
@@ -25,6 +27,9 @@ function App() {
         <Route path="/stats" element={<Stats />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/whatwedo" element={<WhatWeDo />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="*" element={<Home />} />
+        <Route path="/donate" element={<Donations />} />
       </Routes>
 
       {isMobile}
