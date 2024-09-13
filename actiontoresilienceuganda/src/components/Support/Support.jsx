@@ -63,6 +63,24 @@ const DonationOption = ({ title, description, buttonText }) => (
   </Card>
 );
 
+
+const OtherOption = ({ title, description, buttonText }) => (
+  <Card>
+    <CardHeader>
+      <h3 className="donation-title">{title}</h3>
+    </CardHeader>
+    <CardContent>
+      <p className="donation-description">{description}</p>
+    </CardContent>
+    <CardFooter>
+      <Button to="/spread" className="donation-button">
+        {buttonText}
+        <span className="button-arrow">→</span>
+      </Button>
+    </CardFooter>
+  </Card>
+);
+
 const Tabs = ({ children }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.value);
 
@@ -115,12 +133,12 @@ const Support = () => {
         </TabPanel>
         <TabPanel value="other" label="Other Ways to Help">
           <div className="donation-options">
-            <DonationOption 
+            {/* <OtherOption 
               title="Volunteer Your Time"
               description="Contribute your skills and time to make a direct impact in our community. We have various opportunities available."
               buttonText="Explore Volunteer Options"
-            />
-            <DonationOption 
+            /> */}
+            <OtherOption 
               title="Spread the Word"
               description="Help us reach more people by sharing our mission with your network. Your voice can inspire others to join our cause."
               buttonText="Share Our Story"
