@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Support.css';
+import Footer from '../Footer/Footer';
 
 const Button = ({ children, className, to, ...props }) => {
   const navigate = useNavigate();
@@ -108,6 +109,7 @@ const TabPanel = ({ children }) => children;
 
 const Support = () => {
   return (
+    <div>
     <div className="support-container">
       <h1 className="main-title">Support Our Mission</h1>
       
@@ -156,10 +158,12 @@ const Support = () => {
             Have questions about donating or want to discuss other ways to support? 
             Our team is here to assist you.
           </p>
-          <p className="contact-info"><strong>Email:</strong> support@example.org</p>
-          <p className="contact-info"><strong>Phone:</strong> (555) 123-4567</p>
+          <p className="contact-info"><strong>Email:</strong> info@actiontoresilience.org</p>
+          <p className="contact-info"><strong>Phone:</strong> +256 751 866 059</p>
         </CardContent>
       </Card>
+    </div>
+            <Footer />
     </div>
   );
 };

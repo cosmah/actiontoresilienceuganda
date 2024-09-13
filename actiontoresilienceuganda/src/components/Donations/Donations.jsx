@@ -36,8 +36,8 @@ const Donations = () => {
       </div>
       <div className="donation-info">
         <p>For any questions about donations, please contact us at:</p>
-        <p>Email: donations@example.org</p>
-        <p>Phone: (555) 123-4567</p>
+        <p className="contact-info"><strong>Email:</strong> info@actiontoresilience.org</p>
+        <p className="contact-info"><strong>Phone:</strong> +256 751 866 059</p>
       </div>
     </div>
   );
