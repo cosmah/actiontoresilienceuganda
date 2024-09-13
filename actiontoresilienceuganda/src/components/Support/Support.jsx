@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Support.css';
 
 const Button = ({ children, className, to, ...props }) => {
-  if (to) {
-    return (
-      <Link to={to} className={`button ${className}`} {...props}>
-        {children}
-      </Link>
-    );
-  }
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    if (to) {
+      navigate(to);
+    }
+  };
+
   return (
-    <button className={`button ${className}`} {...props}>
+    <button 
+      className={`button ${className}`} 
+      onClick={handleClick}
+      {...props}
+    >
       {children}
     </button>
   );
