@@ -1,0 +1,69 @@
+.cheader {
+    background-color: rgb(97, 143, 249);
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .cheader .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cheader h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cheader h5, .cheader p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .cheader button {
+    background-color: rgb(240, 94, 10);
+    color: rgb(97, 143, 249);
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cheader button:hover {
+    background-color: rgb(255, 255, 255, 0.9);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cheader h1 {
+      font-size: 2rem;
+    }
+  
+    .cheader h5, .cheader p {
+      font-size: 1rem;
+    }
+  
+    .cheader button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cheader h1 {
+      font-size: 1.5rem;
+    }
+  
+    .cheader h5, .cheader p {
+      font-size: 0.9rem;
+    }
+  
+    .cheader button {
+      padding: 8px 15px;
+      font-size: 0.8rem;
+    }
+  }
+  

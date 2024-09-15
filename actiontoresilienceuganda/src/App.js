@@ -13,6 +13,7 @@ import WhatWeDo from "./components/WhatWeDo/WhatWeDo";
 import Support from "./components/Support/Support";
 import Donations from "./components/Donations/Donations";
 import Spread from "./components/Spread/Spread";
+import Contact from "./components/Contact/Contact";
 // import About from "./components/about";
 // import Contact from "./components/contact";
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="*" element={<Home />} />
         <Route path="/donate" element={<Donations />} />
         <Route path="/spread" element={<Spread />} /> 
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
 
       {isMobile}
