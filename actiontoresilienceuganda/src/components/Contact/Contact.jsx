@@ -1,3 +1,4 @@
+// Contact.jsx
 import React from "react";
 import './Contact.css';
 import Cheader from "../Cheader/Cheader";
@@ -6,13 +7,13 @@ import Threejs from "../Threejs/Threejs";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="contact-container">
       <Cheader />
-      <div className="row">
-        <div className="column">
+      <div className="contact-content">
+        <div className="form-column">
           <Form />
         </div>
-        <div className="column">
+        <div className="threejs-column">
           <Threejs />
         </div>
       </div>

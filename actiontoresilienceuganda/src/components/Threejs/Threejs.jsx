@@ -1,3 +1,4 @@
+// Threejs.jsx
 import React, { useRef, useEffect } from "react";
 import './Three.css';
 import { Canvas, useFrame, extend, useThree } from '@react-three/fiber';
@@ -28,7 +29,7 @@ const GlobeComponent = () => {
   }, []);
 
   return (
-    <div ref={globeRef} style={{ height: '100vh', width: '100%' }} />
+    <div ref={globeRef} className="globe-container" />
   );
 };
 
@@ -49,8 +50,8 @@ const CameraControls = () => {
 
 const Threejs = () => {
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
-      <Canvas style={{ height: '100%', width: '100%' }}>
+    <div className="threejs-container">
+      <Canvas>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         <pointLight position={[-10, -10, -10]} intensity={0.5} />
