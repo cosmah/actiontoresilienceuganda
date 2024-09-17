@@ -1,0 +1,23 @@
+/* Contact.css */
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .column:nth-child(2) {
+    display: none;
+  }
+}

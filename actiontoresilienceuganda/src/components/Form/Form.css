@@ -1,107 +1,109 @@
-body {
-    font-family: 'Arial', sans-serif;  /* Set a clean font for the entire page */
+/* General reset and body styling */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;  /* Light background for contrast */
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px;  /* Limit the maximum width for better readability */
-    margin: 0 auto;  /* Center the container */
-    padding: 20px;
-}
-
-.left-column {
-    width: 100%;  /* Full width on small screens */
-    padding: 20px;
-    background-color: #ffffff;  /* White background for the form */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
-    border-radius: 8px;  /* Rounded corners */
-}
-
-.right-column {
-    width: 100%;  /* Full width on small screens */
-    padding: 20px;
-    background-color: #ffffff;  /* White background for the canvas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
-    border-radius: 8px;  /* Rounded corners */
-}
-
-h3, h5, h6 {
-    color: #333;  /* Darker text for headings */
-}
-
-h3 {
-    margin-bottom: 10px;  /* Space below the main heading */
-}
-
-h5 {
-    margin: 5px 0;  /* Space above and below the subheading */
-}
-
-h6 {
-    margin-bottom: 20px;  /* Space below the location */
-    font-weight: normal;  /* Lighter weight for less emphasis */
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;  /* Stack form elements vertically */
-}
-
-.form-group {
-    margin-bottom: 15px;  /* Space between form groups */
-}
-
-label {
-    margin-bottom: 5px;  /* Space below labels */
-    font-weight: bold;  /* Bold labels for emphasis */
-    color: #555;  /* Medium gray for labels */
-}
-
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;  /* Light border for inputs */
-    border-radius: 4px;  /* Rounded corners for inputs */
-    font-size: 16px;  /* Larger font size for readability */
-    transition: border-color 0.3s;  /* Smooth transition for border color */
-}
-
-input:focus, textarea:focus {
-    border-color: #007bff;  /* Highlight border on focus */
-    outline: none;  /* Remove default outline */
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff;  /* Bootstrap primary color */
-    color: white;  /* White text for contrast */
-    border: none;  /* No border */
-    border-radius: 4px;  /* Rounded corners */
-    cursor: pointer;  /* Pointer cursor on hover */
-    font-size: 16px;  /* Consistent font size */
-    transition: background-color 0.3s;  /* Smooth transition for background color */
-}
-
-button:hover {
-    background-color: #0056b3;  /* Darker shade on hover */
-}
-
-@media (min-width: 768px) {
-    .left-column {
-        width: 50%;  /* Revert to 50% width on larger screens */
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+  }
+  
+  /* Container styling */
+  form.contact-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  form.contact-form h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #4CAF50; /* VIP NGO branding color */
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  form.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  
+  /* Input and textarea styling */
+  form.contact-form input[type="text"],
+  form.contact-form input[type="email"],
+  form.contact-form textarea,
+  form.contact-form .PhoneInputInput {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+  
+  form.contact-form input:focus,
+  form.contact-form textarea:focus,
+  form.contact-form .PhoneInputInput:focus {
+    border-color: #4CAF50; /* Branding color */
+  }
+  
+  form.contact-form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  /* Phone Input styling */
+  form.contact-form .PhoneInput {
+    display: block;
+  }
+  
+  form.contact-form .PhoneInputInput {
+    padding-left: 60px; /* To account for the country flag in the PhoneInput */
+  }
+  
+  /* Button styling */
+  form.contact-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  form.contact-form button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Form spacing and alignment */
+  form.contact-form input,
+  form.contact-form textarea,
+  form.contact-form button {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    form.contact-form {
+      padding: 30px;
     }
-    .right-column {
-        width: 50%;  /* Revert to 50% width on larger screens */
+  
+    form.contact-form h2 {
+      font-size: 28px;
     }
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;  /* Stack columns on small screens */
-    }
-}
+  }
+  
