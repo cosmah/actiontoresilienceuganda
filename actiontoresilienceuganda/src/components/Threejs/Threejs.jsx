@@ -1,25 +1,34 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import './Three.css';
 import { Canvas, useFrame, extend, useThree } from '@react-three/fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import Globe from 'globe.gl';
 
 extend({ OrbitControls });
 
-const Cube = () => {
-  const meshRef = useRef();
+const GlobeComponent = () => {
+  const globeRef = useRef();
 
-  useFrame(() => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x += 0.01;
-      meshRef.current.rotation.y += 0.01;
+  useEffect(() => {
+    const myGlobe = Globe()
+      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+      .pointsData([
+        { lat: 0.3476, lng: 32.5825, size: 10, color: 'red' }, // Kampala, Uganda
+        // Add more points as needed
+      ])
+      .pointAltitude("size")
+      .pointColor("color")
+      .onPointClick((point) => {
+        alert(`Clicked on point: ${JSON.stringify(point)}`);
+      });
+
+    if (globeRef.current) {
+      myGlobe(globeRef.current);
     }
-  });
+  }, []);
 
   return (
-    <mesh ref={meshRef}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshBasicMaterial color={0x00ff00} />
-    </mesh>
+    <div ref={globeRef} style={{ height: '100vh', width: '100%' }} />
   );
 };
 
@@ -40,12 +49,15 @@ const CameraControls = () => {
 
 const Threejs = () => {
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <CameraControls />
-      <Cube />
-    </Canvas>
+    <div style={{ height: '100vh', width: '100%' }}>
+      <Canvas style={{ height: '100%', width: '100%' }}>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+        <CameraControls />
+      </Canvas>
+      <GlobeComponent />
+    </div>
   );
 }
 
