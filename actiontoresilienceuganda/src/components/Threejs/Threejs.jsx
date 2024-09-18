@@ -1,62 +1,69 @@
-// Threejs.jsx
 import React, { useRef, useEffect } from "react";
 import './Three.css';
-import { Canvas, useFrame, extend, useThree } from '@react-three/fiber';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Globe from 'globe.gl';
-
-extend({ OrbitControls });
 
 const GlobeComponent = () => {
   const globeRef = useRef();
+  const requestRef = useRef();
 
   useEffect(() => {
-    const myGlobe = Globe()
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-      .pointsData([
-        { lat: 0.3476, lng: 32.5825, size: 10, color: 'red' }, // Kampala, Uganda
-        // Add more points as needed
-      ])
-      .pointAltitude("size")
-      .pointColor("color")
-      .onPointClick((point) => {
-        alert(`Clicked on point: ${JSON.stringify(point)}`);
-      });
+    let globeInstance;
 
-    if (globeRef.current) {
-      myGlobe(globeRef.current);
-    }
+    const initGlobe = () => {
+      globeInstance = Globe()
+        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+        .pointsData([
+          { lat: 0.3476, lng: 32.5825, size: 10, color: 'red' }, // Kampala, Uganda
+          // Add more points as needed
+        ])
+        .pointAltitude("size")
+        .pointColor("color")
+        .onPointClick((point) => {
+          alert(`Clicked on point: ${JSON.stringify(point)}`);
+        });
+
+      if (globeRef.current) {
+        globeInstance(globeRef.current);
+      }
+
+      // Get the Three.js Scene
+      const scene = globeInstance.scene();
+      const camera = globeInstance.camera();
+      const renderer = globeInstance.renderer();
+      
+      // Find the globe mesh in the scene
+      const globeMesh = scene.children.find(obj => obj.type === 'Mesh');
+
+      // Animation function
+      const animate = () => {
+        // Rotate the globe mesh continuously
+        if (globeMesh) {
+          globeMesh.rotation.y += 0.005; // Adjust this value to change rotation speed
+        }
+
+        renderer.render(scene, camera);
+        requestRef.current = requestAnimationFrame(animate);
+      };
+
+      requestRef.current = requestAnimationFrame(animate);
+    };
+
+    initGlobe();
+
+    return () => {
+      cancelAnimationFrame(requestRef.current);
+      if (globeInstance) {
+        globeInstance._destructor();
+      }
+    };
   }, []);
 
-  return (
-    <div ref={globeRef} className="globe-container" />
-  );
-};
-
-const CameraControls = () => {
-  const { camera, gl } = useThree();
-  const controlsRef = useRef();
-
-  useFrame(() => {
-    if (controlsRef.current) {
-      controlsRef.current.update();
-    }
-  });
-
-  return (
-    <orbitControls ref={controlsRef} args={[camera, gl.domElement]} />
-  );
+  return <div ref={globeRef} className="globe-container" />;
 };
 
 const Threejs = () => {
   return (
     <div className="threejs-container">
-      <Canvas>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1} />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} />
-        <CameraControls />
-      </Canvas>
       <GlobeComponent />
     </div>
   );

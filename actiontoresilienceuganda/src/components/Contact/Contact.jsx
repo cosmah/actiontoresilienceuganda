@@ -4,10 +4,13 @@ import './Contact.css';
 import Cheader from "../Cheader/Cheader";
 import Form from "../Form/Form";
 import Threejs from "../Threejs/Threejs";
+import Footer from "../Footer/Footer";
+import Map from "../Map/Map";
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <div>
+      <div className="contact-container">
       <Cheader />
       <div className="contact-content">
         <div className="form-column">
@@ -18,6 +21,12 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    <Map/>
+    <div className="footer">
+      <Footer/>
+    </div>
+    </div>
+    
   );
 }
 
