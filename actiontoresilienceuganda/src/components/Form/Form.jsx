@@ -1,16 +1,25 @@
 import React from "react";
 import "./Form.css";
-import { useForm, Controller } from 'react-hook-form';
+import { useForm as useReactHookForm, Controller } from 'react-hook-form';
 import PhoneInput from 'react-phone-number-input';
-// import { CountryDropdown } from 'react-country-region-selector';
 import 'react-phone-number-input/style.css';
+import { useForm as useFormspree, ValidationError } from '@formspree/react';
 
 const Form = () => {
-  const { register, handleSubmit, control } = useForm();
-  const onSubmit = data => console.log(data);
+  const { control, register, handleSubmit: handleReactHookSubmit } = useReactHookForm();
+  const [state, handleSubmit] = useFormspree("manwgelj");
+
+  const onSubmit = (data) => {
+    handleReactHookSubmit(data);
+    handleSubmit(data);
+  };
+
+  if (state.succeeded) {
+    return <p>Message submitted successfully, please hold on, We're going to get back to you</p>;
+  }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+    <form className="contact-form" onSubmit={onSubmit}>
       <h2>Contact Us</h2>
 
       {/* <label htmlFor="country">Location</label>
@@ -41,6 +50,11 @@ const Form = () => {
         {...register('email', { required: true })} 
         placeholder="Your Email" 
       />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
 
       <label htmlFor="phone">Phone Number</label>
       <Controller
@@ -62,8 +76,13 @@ const Form = () => {
         {...register('message')} 
         placeholder="Your Message" 
       />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
 
-      <button type="submit">Send Message</button>
+      <button type="submit" disabled={state.submitting}>Send Message</button>
     </form>
   );
 };
