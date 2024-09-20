@@ -5,7 +5,7 @@ import Cheader from "../Cheader/Cheader";
 import Form from "../Form/Form";
 import Threejs from "../Threejs/Threejs";
 import Footer from "../Footer/Footer";
-import Map from "../Map/Map";
+// import Map from "../Map/Map";
 
 const Contact = () => {
   return (
@@ -21,7 +21,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-    <Map/>
+    {/* <Map/> */}
     <div className="footer">
       <Footer/>
     </div>
