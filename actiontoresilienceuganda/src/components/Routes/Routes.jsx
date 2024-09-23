@@ -28,36 +28,36 @@ const RoutingComponent = () => {
           X
         </div>
         <li>
-          <Link to="/">
+          <Link to="/" onClick={toggleMenu}>
             <span>Home</span>
           </Link>
         </li>
-        <li>|</li>
+        <li className="separator">|</li>
         <li>
-          <Link to="/about">
+          <Link to="/about" onClick={toggleMenu}>
             <span>About Us</span>
           </Link>
         </li>
-        <li>|</li>
+        <li className="separator">|</li>
         <li>
-          <Link to="/whatwedo">
+          <Link to="/whatwedo" onClick={toggleMenu}>
             <span>What We Do</span>
           </Link>
         </li>
-        <li>|</li>
+        <li className="separator">|</li>
         <li>
-          <Link to="/support">
+          <Link to="/support" onClick={toggleMenu}>
             <span>Support Us</span>
           </Link>
         </li>
-        <li>|</li>
+        <li className="separator">|</li>
         <li>
-          <Link to="/contact">
+          <Link to="/contact" onClick={toggleMenu}>
             <span>Contact Us</span>
           </Link>
         </li>
         <li className="donate-button">
-          <Link to={"/donate"}>
+          <Link to={"/donate"} onClick={toggleMenu}>
             <button className="btn">Donate</button>
           </Link>
         </li>
