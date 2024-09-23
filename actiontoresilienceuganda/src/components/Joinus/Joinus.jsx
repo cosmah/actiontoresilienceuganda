@@ -3,6 +3,7 @@ import "./Joinus.css";
 import communityGatheringImage from "../../assets/11.jpeg";
 import EductionalWorkshop from "../../assets/8.jpeg";
 import YouthEmpowerment from "../../assets/10.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const ActivityCard = ({ src, alt, title }) => (
   <div className="activity-card">
@@ -14,6 +15,13 @@ const ActivityCard = ({ src, alt, title }) => (
 );
 
 const Joinus = () => {
+
+  const navigate = useNavigate();
+
+  const handleMoreInfoClick = () => {
+    navigate("/donate");
+  };
+
   return (
     <div className="join-us-container">
       <div className="join-us-banner">
@@ -24,7 +32,7 @@ const Joinus = () => {
             communities and empowering individuals. Our diverse range of
             activities creates lasting impact and fosters positive change.
           </p>
-          <button className="join-us-button">Donate</button>
+          <button className="join-us-button" onClick={handleMoreInfoClick}>Donate</button>
         </div>
       </div>
       <div className="activities-section">
