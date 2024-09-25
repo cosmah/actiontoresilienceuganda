@@ -4,8 +4,8 @@ import "./Hello.css";
 const Hello = (props) => {
   const slogans = [
     "Welcome to Action To Resilience Uganda",
-    "Empowering Communities, Enriching Lives!",
-    "Together, We Make a Difference!"
+    
+    "Transforming Communities For Better Lives"
   ];
 
   const [currentSloganIndex, setCurrentSloganIndex] = useState(0);

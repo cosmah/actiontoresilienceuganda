@@ -3,6 +3,9 @@ import "./Joinus.css";
 import communityGatheringImage from "../../assets/11.jpeg";
 import EductionalWorkshop from "../../assets/8.jpeg";
 import YouthEmpowerment from "../../assets/10.jpeg";
+import Youth from "../../assets/13.jpeg";
+import Livelihood from "../../assets/14.jpeg";
+
 import { useNavigate } from "react-router-dom";
 
 const ActivityCard = ({ src, alt, title }) => (
@@ -50,8 +53,20 @@ const Joinus = () => {
           />
           <ActivityCard
             src={YouthEmpowerment}
-            alt="Youth empowerment"
-            title="Youth Empowerment"
+            alt="Health Outreach Programs"
+            title="Health Outreach Programs"
+          />
+        </div>
+        <div className="activities-grid">
+          <ActivityCard
+            src={Youth}
+            alt="youth empowerment"
+            title="Youth empowerment"
+          />
+          <ActivityCard
+            src={Livelihood}
+            alt="livelihood and skills devlopment"
+            title="livelihood and skills devlopment"
           />
         </div>
       </div>
