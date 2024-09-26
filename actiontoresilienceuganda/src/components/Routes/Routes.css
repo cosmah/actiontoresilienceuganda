@@ -132,6 +132,10 @@
   .nav-bar .hamburger {
     display: block;
     cursor: pointer;
+    position: absolute;
+    right: 0; /* Position hamburger on the right end */
+    
+    margin: 1rem; /* Add some margin */
   }
 
   .nav-bar .hamburger .bar {
@@ -154,27 +158,8 @@
   .separator {
     display: none; /* Hide separators on small screens */
   }
-}
 
-.nav-bar li a span {
-  position: relative;
-  z-index: 1;
-}
-
-.nav-bar li a span::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 100%;
-  top: 0;
-  background: #bada55;
-  height: 2px;
-  transition-property: right;
-  transition-duration: 0.25s;
-  transition-timing-function: ease-out;
-}
-
-.nav-bar li a:hover span::before {
-  right: 0;
+  .logo-text {
+    display: none; /* Hide logo-text on small screens */
+  }
 }
