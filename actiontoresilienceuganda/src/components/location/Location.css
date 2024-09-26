@@ -1,0 +1,55 @@
+.areas-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .area-card {
+    border: 1px solid #049fce;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .area-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+  }
+  
+  .area-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  .section-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 768px) {
+    .areas-grid {
+      grid-template-columns: 1fr; /* Stack areas vertically on small screens */
+    }
+  }
+  

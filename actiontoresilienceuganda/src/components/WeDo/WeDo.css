@@ -1,93 +1,176 @@
 /* WeDo.css */
 .we-do-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.we-do-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50; /* Darker title color */
+}
+
+.we-do-section {
+  margin-bottom: 3rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #f9f9f9; /* Light background for sections */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+.health-section {
+  display: flex; /* Flexbox to align content in a row */
+  align-items: center; /* Align vertically centered */
+  gap: 2rem; /* Gap between image and text */
+  margin-bottom: 3rem; /* Space below the section */
+}
+
+.health-image {
+  flex: 1; /* Image takes up 1/2 of available space */
+}
+
+.health-content {
+  flex: 1; /* Content takes up 1/2 of available space */
+}
+
+.section-image {
+  width: 100%; /* Full width within its column */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* No cropping */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.section-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+}
+
+/* Make the layout stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .health-section {
+    flex-direction: column; /* Stack content in a column */
+    text-align: center; /* Center align text */
   }
-  
-  .we-do-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-  
-  .we-do-section {
-    margin-bottom: 3rem;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
+
+  .section-image {
+    width: 100%;
     margin-bottom: 1rem;
-    color: #444;
   }
-  
-  .section-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
-  }
-  
+}
+
+
+/* Programs grid */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.program-card {
+  border: 1px solid #049fce;
+  background-color: #f7ea3f;
+  border-radius: 8px;
+  padding: 1.5rem; /* Increase padding for breathing room */
+  transition: box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enhance hover effect */
+}
+
+.program-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.program-icon {
+  font-size: 1.8rem; /* Increase icon size */
+  margin-right: 1rem;
+}
+
+.program-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.program-content p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.impact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.impact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.impact-icon {
+  margin-right: 0.75rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
   .programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .program-card {
-    border: 1px solid #049fce;
-    background-color: #f7ea3f;
-    border-radius: 8px;
-    padding: 1rem;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .program-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .program-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .program-icon {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
-  
-  .program-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .program-content p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .impact-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .impact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: #555;
-  }
-  
-  .impact-icon {
-    margin-right: 0.5rem;
-  }
-  
-  @media (max-width: 768px) {
-    .programs-grid {
       grid-template-columns: 1fr;
-    }
   }
+
+  .section-image {
+    width: 100%;
+  }
+}
+
+
+.gender-section {
+  display: flex; /* Flexbox for horizontal layout */
+  align-items: center;
+  gap: 2rem; /* Space between image and text */
+  margin-bottom: 3rem;
+}
+
+.gender-content {
+  flex: 1; /* Ensures the content takes full width of the container */
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.section-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .gender-section {
+    flex-direction: column; /* Stack content vertically on small screens */
+    text-align: center;
+  }
+}

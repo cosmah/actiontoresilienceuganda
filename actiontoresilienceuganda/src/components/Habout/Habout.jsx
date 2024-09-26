@@ -33,27 +33,8 @@ const Habout = (props) => {
             environmental conservation to enable them live a fulfilling
             sustainable lives.
           </p>
-          <h3>Our Programs</h3>
-          <ul>
-            <li>
-              <strong>Education:</strong> Providing access to quality education
-              and vocational training for children and adults.
-            </li>
-            <li>
-              <strong>Health:</strong> Improving healthcare services and
-              promoting healthy lifestyles through community health programs.
-            </li>
-            <li>
-              <strong>Economic Development:</strong> Supporting small businesses
-              and entrepreneurship to create job opportunities and economic
-              growth.
-            </li>
-            <li>
-              <strong>Environmental Conservation:</strong> Promoting sustainable
-              practices and protecting natural resources to ensure a healthy
-              environment for future generations.
-            </li>
-          </ul>
+          
+          
           <h3>Get Involved</h3>
           <p>
             Join us in making a difference! Whether you want to volunteer,

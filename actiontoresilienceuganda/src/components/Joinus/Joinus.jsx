@@ -1,10 +1,10 @@
 import React from "react";
 import "./Joinus.css";
-import communityGatheringImage from "../../assets/11.jpeg";
 import EductionalWorkshop from "../../assets/8.jpeg";
 import YouthEmpowerment from "../../assets/10.jpeg";
 import Youth from "../../assets/13.jpeg";
 import Livelihood from "../../assets/14.jpeg";
+// import seminar from "../../assets/5.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const Joinus = () => {
         <h2 className="activities-title">Our Activities</h2>
         <div className="activities-grid">
           <ActivityCard
-            src={communityGatheringImage}
+            src={Youth}
             alt="Community gathering"
             title="Community Engagement"
           />
@@ -53,21 +53,21 @@ const Joinus = () => {
           />
           <ActivityCard
             src={YouthEmpowerment}
-            alt="Health Outreach Programs"
-            title="Health Outreach Programs"
+            alt="Community Outreach Programs"
+            title="Community Outreach Programs"
           />
         </div>
         <div className="activities-grid">
           <ActivityCard
-            src={Youth}
-            alt="youth empowerment"
-            title="Youth empowerment"
-          />
-          <ActivityCard
             src={Livelihood}
-            alt="livelihood and skills devlopment"
-            title="livelihood and skills devlopment"
+            alt="community empowerment"
+            title="Community empowerment"
           />
+          {/* <ActivityCard
+            src={seminar}
+            alt="Youth Health seminars"
+            title="Youth Health seminars"
+          /> */}
         </div>
       </div>
     </div>
