@@ -5,26 +5,26 @@ import skills from "../../assets/14.jpeg";
 import gender from "../../assets/13.jpeg";
 
 const WeDo = () => {
-  const programs = [
-    {
-      title: "Community Resilience Building",
-      description:
-        "Empowering communities to prepare for and recover from challenges.",
-      icon: "👥",
-    },
-    {
-      title: "Sustainable Development Initiatives",
-      description:
-        "Implementing projects that promote long-term environmental and economic sustainability.",
-      icon: "📊",
-    },
-    {
-      title: "Youth Empowerment Programs",
-      description:
-        "Equipping young people with skills and resources for a resilient future.",
-      icon: "❤️",
-    },
-  ];
+  // const programs = [
+  //   {
+  //     title: "Community Resilience Building",
+  //     description:
+  //       "Empowering communities to prepare for and recover from challenges.",
+  //     icon: "👥",
+  //   },
+  //   {
+  //     title: "Sustainable Development Initiatives",
+  //     description:
+  //       "Implementing projects that promote long-term environmental and economic sustainability.",
+  //     icon: "📊",
+  //   },
+  //   {
+  //     title: "Youth Empowerment Programs",
+  //     description:
+  //       "Equipping young people with skills and resources for a resilient future.",
+  //     icon: "❤️",
+  //   },
+  // ];
 
   return (
     <div className="we-do-container">
@@ -115,7 +115,7 @@ const WeDo = () => {
         </div>
       </section>
 
-      <section className="we-do-section">
+      {/* <section className="we-do-section">
         <h2 className="section-title">Our Programs</h2>
         <div className="programs-grid">
           {programs.map((program, index) => (
@@ -164,7 +164,7 @@ const WeDo = () => {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       <section className="we-do-section">
         <h2 className="section-title">Our Impact</h2>
